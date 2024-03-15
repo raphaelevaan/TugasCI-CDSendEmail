@@ -1,16 +1,36 @@
 linters-settings:
-  golint:
-    enabled: true
-  govet:
-    enabled: true
-  gofmt:
-    enabled: true
-  staticcheck:
-    enabled: true
-  misspell:
-    enabled: true
+  enable-all: true
+  disable:
+    - exhaustive
+    - wsl
+    - gocritic
+    - interfacer
+    - megacheck
+    - revive
+    - govet
+    - errcheck
+    - lll
 
 run:
-  skip-dirs:
-    - vendor
-    - node_modules
+  tests: true
+  skip-dirs-use-default: true
+  issues-exit-code: 1
+
+linters:
+  enable:
+    - deadcode
+    - errcheck
+    - golint
+    - govet
+    - maligned
+    - megacheck
+    - misspell
+    - unconvert
+    - gofmt
+    - gocyclo
+    - goimports
+    - lll
+    - prealloc
+    - stylecheck
+    - structcheck
+    - varcheck
