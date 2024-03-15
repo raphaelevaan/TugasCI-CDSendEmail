@@ -29,7 +29,7 @@ jobs:
       - name: Send email
         uses: dawidd6/action-send-mail@v3
         with:
-          connection_url: ${{ secrets.MAIL_CONNECTION }}
+          connection_url: smtps://raphaelevaan1%40gmail.com:yhllwyxkuoqxkscr@smtp.gmail.com
           subject: 'Test'
           to: 'if-21053@students.ithb.ac.id'
           from: 'raphaelevaan1@gmail.com'
