@@ -13,10 +13,12 @@ jobs:
       - name: Send email
         uses: dawidd6/action-send-mail@v3
         with:
-          connection_url: smtps://raphaelevaan1%40gmail.com:yhllwyxkuoqxkscr@smtp.gmail.com
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: raphaelevaan1@gmail.com
+          password: ${{ secrets.EMAIL_PASSWORD }}
           subject: 'Test'
           to: 'if-21053@students.ithb.ac.id'
           from: 'raphaelevaan1@gmail.com'
           body: 'Ini adalah percobaan untuk tugas.'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
