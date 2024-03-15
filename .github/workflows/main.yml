@@ -23,6 +23,8 @@ jobs:
         with:
           args: run ./...
           config: .golangci.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
   send_email:
     name: Send email notification
